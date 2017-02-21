@@ -2,12 +2,9 @@ if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="green"; fi
 local return_code="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
 
 # primary prompt
-PROMPT='${return_code} $FG[032]%~\
+PROMPT='${return_code} $FG[045]%~\
 $(git_prompt_info) \
 $FG[105]%(!.#.»)%{$reset_color%} '
-
-# color vars
-eval my_orange='$FG[214]'
 
 # git settings
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%} (%{$fg[red]%}"
